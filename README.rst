@@ -1,10 +1,9 @@
-######################
+======================
 ansible-all-the-things
-######################
+======================
 
 Ansible All The Things, No Seriously
-####################################
-
+====================================
 
 This is currently going to serve as a brain dumping ground for various topics
 about using `Ansible`_ for "All The Things". Eventually I will turn this into
@@ -20,38 +19,39 @@ The slide presentation will likely be put together using `hovercraft`_.
 What is Ansible?
 ----------------
 
-`Ansible`_ is a task orchestration utility that can be used for ad-hoc task
-execution on any one or many systems within an infrastructure. These tasks are
+`Ansible`_ is a radically simple IT automation platform that makes your
+applications and systems easier to deploy. Avoid writing scripts or custom code
+to deploy and update your applications— automate in a language that approaches
+plain English, using SSH, with no agents to install on remote systems
+
+It can be thought of as a task orchestration utility that can be used for ad-hoc
+task execution on one or many systems within an infrastructure. These tasks are
 implemented as `modules`_ and can be combined into a simple series of tasks or
-a complex workflows using what are known as `playbooks`_.
+a complex workflows using what are known as `playbooks`_ and `roles`_.
 
 Simply put, `Ansible`_ runs tasks on your systems (one or many) and can run many
 tasks automatically when they are written down as a playbook.
 
-Topics
-------
+Rendering the Presentation
+--------------------------
 
-* Configuration Management
-* Provisioning
-* Deployment
-* Orchestration
-* Builds
+You will first need to have `hovercraft`_ installed and in our path, you can
+then run `make`_.
 
-  * Software
-  * Containers
-  * Image Artifacts
+::
 
-* Workflow Automation
-* CI
+    make
 
-  * `Zuul`_
+You will now have a directory named ``out/`` which is where the rendered
+presentation is, point your favorite web browser at this location or upload the
+contents of that directory to somewhere that is served on the web and view it
+from there.
 
-* `ansible-container`_
+To clean up.
 
-  * Builds
-  * Push (`OpenShift`_ and `Kubernetes`_)
+::
 
-
+    make clean
 
 .. _Ansible: https://www.ansible.com/
 .. _Kubernetes: http://kubernetes.io/
@@ -59,6 +59,7 @@ Topics
 .. _hovercraft: https://github.com/regebro/hovercraft
 .. _modules: http://docs.ansible.com/ansible/modules.html
 .. _playbooks: http://docs.ansible.com/ansible/playbooks.html
+.. _roles: http://docs.ansible.com/ansible/playbooks_roles.html
 .. _ansible-container:
     https://github.com/ansible/ansible-container
 .. _Zuul:
