@@ -208,6 +208,9 @@ But seriously, what are you trying to do?
 * Replace terrible shell scripts that have survived too long already?
 * Other?
 
+ANSIBLE CAN DO ALL OF THAT
+--------------------------
+
 ----
 
 Configuration Management
