@@ -1,4 +1,5 @@
 :skip-help: true
+:title: Ansible All the Things, No Seriously
 
 .. title: Ansible All The Things, No Seriously
 
@@ -106,9 +107,8 @@ out against one or many hosts.
 
 First, we need an `inventory`_ to specify our hosts and groups of hosts.
 
-.. note::
-    There is also a special "all" group that is implicitly defined as the sum of
-    all hosts in your inventory.
+** Note: There is also a special "all" group that is implicitly defined as the
+sum of all hosts in your inventory.
 
 A very simple Inventory
 -----------------------
