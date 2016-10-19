@@ -41,7 +41,7 @@ Outline
 -------
 
 * Quick intro to Ansible (just in case)
-* What do people normally do with Ansible?
+* Ansible is an Automation Tool
 * Why on earth would I want to do all the things with Ansible?
 * Configuration Management
 * Provisioning
@@ -60,7 +60,7 @@ Outline
 
   * `Zuul`_
 
-* `ansible-container`_
+* Ansible Container
 
   * Builds
   * Push (`OpenShift`_ and `Kubernetes`_)
@@ -158,26 +158,28 @@ This would then be executed with the ``ansible-playbook`` command.
 
 ----
 
-What do people normally do with Ansible?
-========================================
+Ansible is an automation tool
+=============================
 
 Ansible is often used for configuration management and is often compared to
 tools in that realm such as `Puppet`_, `Chef`_, and `SaltStack`_. Ansible goes
 beyond that though and is also used for many things such as deployment and
 provisioning. (We will talk more about this later...)
 
-Ansible is an automation tool
------------------------------
+Ansible
+-------
 
-Ansible:
+* Is agentless, you just need `python`_ and SSH
+* IS NOT a configuration management system
+* IS an automation tool
+* automates tasks, some of which can be config management tasks
 
-* Is not just a configuration management system
-* Is an automation tool
-* can perform many functions
-
-  * some functions intersect with traditional configuration management systems
-    festures (such as file templating and service state definition)
   * (this leads to confusion)
+
+* Is great "glue" between different tasks and tools
+* Can be used with "traditional" configuration management systems
+
+  * there's even a `puppet module`_
 
 ----
 
@@ -215,6 +217,8 @@ ANSIBLE CAN DO ALL OF THAT
 
 Configuration Management
 ========================
+
+
 
 ----
 
@@ -258,7 +262,7 @@ Continuous Integration
 
 ----
 
-ansible-container
+Ansible Container
 =================
 
 ----
@@ -266,22 +270,42 @@ ansible-container
 References
 ==========
 
+* `Ansible`_
+* `YAML`_
+* `Chef`_
+* `Puppet`_
+* `python`_
+* `SaltStack`_
+* `Kubernetes`_
+* `OpenShift`_
+* `hovercraft`_
+* `modules`_
+* `playbooks`_
+* `inventory`_
+* `puppet module`_
+* `ansible-container`_
+* `Zuul v2.5`_
+* `Zuul v3`_
 * `Source code for this presentation`_
+
+.. _Ansible: https://www.ansible.com/
 
 .. _YAML: http://yaml.org/
 .. _Chef: https://www.chef.io/
 .. _Puppet: https://puppet.com/
-.. _Ansible: https://www.ansible.com/
+.. _python: https://www.python.org/
 .. _SaltStack: https://saltstack.com/
 .. _Kubernetes: http://kubernetes.io/
 .. _OpenShift: https://www.openshift.org/
+.. _Zuul v2.5: http://status.openstack.org/zuul/
 .. _hovercraft: https://github.com/regebro/hovercraft
 .. _modules: http://docs.ansible.com/ansible/modules.html
 .. _playbooks: http://docs.ansible.com/ansible/playbooks.html
 .. _inventory: http://docs.ansible.com/ansible/intro_inventory.html
+.. _puppet module: http://docs.ansible.com/ansible/puppet_module.html
 .. _ansible-container:
     https://github.com/ansible/ansible-container
-.. _Zuul:
+.. _Zuul v3:
     http://lists.openstack.org/pipermail/openstack-dev/2016-June/097584.html
 .. _Source code for this presentation:
     https://github.com/maxamillion/ansible-all-the-things
