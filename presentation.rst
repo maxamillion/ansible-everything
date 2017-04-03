@@ -6,6 +6,8 @@
 Ansible Everything
 ==================
 
+----
+
 .. image:: images/ansible-all-the-things.jpg
     :align: center
     :scale: 150%
@@ -15,13 +17,17 @@ Ansible Everything
 No, Seriously
 =============
 
+
+
 .. image:: images/ansible-logo.png
     :height: 400px
     :width: 400px
     :align: center
 
-... all the things.
-===================
+
+
+... everything
+==============
 
 ----
 
@@ -36,6 +42,8 @@ Ansible. We'll discuss various topics such as configuration management,
 provisioning, deployment, orchestration, command line tooling, builds,
 event-based execution, workflow automation, continuous integration, and
 container management.
+
+----
 
 Outline
 -------
@@ -73,9 +81,9 @@ Outline
 Quick Introduction to Ansible
 =============================
 
-Ansible is a simple *task* automation tool.
+Ansible is a simple **task** automation tool.
 
-*Tasks* are performed via ``modules``
+**Tasks** are performed via ``modules``
 
 Ad-hoc tasks are simple from the command line with ``ansible``
 
@@ -192,7 +200,7 @@ Why on earth would I want to do all the things with Ansible?
   hosts
 
   * Can also execute tasks on different hosts to orchestrate otherwise complex
-    order of operations.
+    order of operations, even conditionally based on system facts.
 
 * Modules can we written in any programming language that can understand JSON
 
@@ -220,12 +228,95 @@ ANSIBLE CAN DO ALL OF THAT
 Configuration Management
 ========================
 
+What is `configuration management`_?
 
+Systems engineering process for establishing and maintaining consistency of
+a product's performance, functional, and physical attributes with its
+requirements, design, and operational information throughout its life.
+
+It generally boils down to:
+
+* Managing file content
+* Templating configurations
+* System and Service state
+* Package Management
+
+Ansible does that!
+------------------
+
+* Service state: ``service`` module
+* Ansible files and configuration modules:  ``acl`` ``archive`` ``assemble``
+  ``blockinfile`` ``copy`` ``fetch`` ``file`` ``find`` ``ini_file``
+  ``iso_extract`` ``lineinfile`` ``patch`` ``replace`` ``stat`` ``synchronize``
+  ``tempfile`` ``template`` ``unarchive`` ``xattr``
+* Ansible System state module support:  ``aix_inittab`` ``alternatives`` ``at``
+  ``authorized_key`` ``beadm`` ``capabilities`` ``cron`` ``cronvar``
+  ``crypttab`` ``debconf`` ``facter`` ``filesystem`` ``firewalld``
+  ``gconftool2`` ``getent`` ``gluster_volume`` ``group`` ``hostname``
+  ``iptables`` ``java_cert`` ``kernel_blacklist`` ``known_hosts``
+  ``locale_gen`` ``lvg`` ``lvol`` ``make`` ``modprobe`` ``mount`` ``ohai``
+  ``open_iscsi`` ``openwrt_init`` ``osx_defaults`` ``pam_limits`` ``pamd``
+  ``parted`` ``ping`` ``puppet`` ``runit`` ``seboolean`` ``sefcontext``
+  ``selinux`` ``selinux_permissive`` ``seport`` ``service`` ``setup``
+  ``solaris_zone`` ``svc`` ``sysctl`` ``systemd`` ``timezone`` ``ufw`` ``user``
+* Ansible Package Management support: ``bower`` ``bundler`` ``composer``
+  ``cpanm`` ``easy_install`` ``gem`` ``maven_artifact`` ``npm`` ``pear`` ``pip``
+  ``apk`` ``apt`` ``apt_key`` ``apt_repository`` ``apt_rpm`` ``dnf``
+  ``dpkg_selections`` ``homebrew`` ``homebrew_cask`` ``homebrew_tap`` ``layman``
+  ``macports`` ``openbsd_pkg`` ``opkg`` ``package`` ``pacman`` ``pkg5``
+  ``pkg5_publisher`` ``pkgin`` ``pkgng`` ``pkgutil`` ``portage`` ``portinstall``
+  ``pulp_repo`` ``redhat_subscription`` ``rhn_channel`` ``rhn_register``
+  ``rpm_key`` ``slackpkg`` ``sorcery`` ``svr4pkg`` ``swdepot`` ``swupd``
+  ``urpmi`` ``xbps`` ``yum`` ``yum_repository`` ``zypper`` ``zypper_repository``
+
+
+More modules being added all the time...
+
+----
+
+Configuration Management - Special Topics
+=========================================
+
+Alright, we can install packages, configure and enable some services, what about
+more sophisticated state definition?
+
+Ansible has you covered
+-----------------------
+
+Ansible modules support to cater to a wide array of common Infrasturcture
+Service needs.
+
+
+The following categories are covered extensively by Ansible modules:
+  * Clustering
+  * Commands
+  * Crypto
+  * Database
+  * Files
+  * Identity
+  * Inventory
+  * Messaging
+  * Monitoring
+  * Network
+  * Notification
+  * Packaging
+  * Remote
+  * Management
+  * Source
+  * Control
+  * Storage
+  * System
+  * Utilities
+  * Web
+  * Infrastructure
+  * Windows
 
 ----
 
 Provisioning
 ============
+
+
 
 ----
 
@@ -311,4 +402,5 @@ References
     http://lists.openstack.org/pipermail/openstack-dev/2016-June/097584.html
 .. _Source code for this presentation:
     https://github.com/maxamillion/ansible-all-the-things
-
+.. _configuration management:
+    https://en.wikipedia.org/wiki/Configuration_management
