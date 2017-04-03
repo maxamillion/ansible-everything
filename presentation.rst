@@ -1,12 +1,10 @@
 :skip-help: true
-:title: Ansible All the Things, No Seriously
+:title: Ansible Everything
 
-.. title: Ansible All The Things, No Seriously
+.. title: Ansible Everything
 
-Ansible All The Things, No Seriously
-====================================
-
-----
+Ansible Everything
+==================
 
 .. image:: images/ansible-all-the-things.jpg
     :align: center
@@ -33,12 +31,15 @@ Topics for the day
 In this presentation we will discuss `Ansible`_, a radically simple IT
 automation system.
 
-More specifically, we will be discussing `Ansible`_ in the context of the
-following topics:
-
+Specifically we will explore the traditional to the unorthodox use cases of
+Ansible. We'll discuss various topics such as configuration management,
+provisioning, deployment, orchestration, command line tooling, builds,
+event-based execution, workflow automation, continuous integration, and
+container management.
 
 Outline
 -------
+
 
 * Quick intro to Ansible (just in case)
 * Ansible is an Automation Tool
@@ -58,7 +59,8 @@ Outline
 * Workflow Automation
 * CI
 
-  * `Zuul`_
+  * CI Systems Powered By Ansible
+  * Using Ansible in CI
 
 * Ansible Container
 
@@ -71,9 +73,9 @@ Outline
 Quick Introduction to Ansible
 =============================
 
-Ansible is a simple task automation tool.
+Ansible is a simple *task* automation tool.
 
-Tasks are performed via ``modules``
+*Tasks* are performed via ``modules``
 
 Ad-hoc tasks are simple from the command line with ``ansible``
 

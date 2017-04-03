@@ -1,9 +1,9 @@
-======================
-ansible-all-the-things
-======================
+==================
+ansible-everything
+==================
 
-Ansible All The Things, No Seriously
-====================================
+Ansible Everything
+==================
 
 This is currently going to serve as a brain dumping ground for various topics
 about using `Ansible`_ for "All The Things". Eventually I will turn this into
