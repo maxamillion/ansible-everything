@@ -53,7 +53,7 @@ Outline
 * Ansible is an Automation Tool
 * Why on earth would I want to do all the things with Ansible?
 * Configuration Management
-* Provisioning
+* Provisioning and Systems Management
 * Deployment
 * Orchestration
 * Command Line Tooling
@@ -300,21 +300,109 @@ The following categories are covered extensively by Ansible modules:
   * Network
   * Notification
   * Packaging
-  * Remote
-  * Management
-  * Source
-  * Control
+  * Remote Management
+  * Source Control
   * Storage
   * System
   * Utilities
-  * Web
-  * Infrastructure
+  * Web Infrastructure
   * Windows
 
 ----
 
-Provisioning
-============
+Provisioning and System Management
+==================================
+
+Most toolchains require external tools for provisioning and/or bootstrapping an
+environment that can then be managed, not Ansible. This allows you to maintain
+a single toolchain and work practices across the team for all functions.
+
+Infrastructure as a Service
+---------------------------
+
+Provisioning support for many IaaS Cloud providers:
+
+  * Amazon Web Services
+  * Apache CloudStack
+  * Centurylink Cloud
+  * Digital Ocean
+  * DimensionData
+  * Google Cloud
+  * Linode
+  * Microsoft Azure
+  * OpenStack
+  * Rackspace Public Cloud
+  * Softlayer
+  * Webfaction
+
+Datacenter and Virtualization
+-----------------------------
+
+  * oVirt / RHV
+  * libvirt resource management
+  * Joyent SmartOS Virt
+  * VMWare (VSphere/ESXi)
+
+Storage
+-------
+
+  * Infinidat
+  * NetApp
+  * ZFS
+
+----
+
+Provisioning and Systems Management - Continued
+===============================================
+
+Networking
+----------
+
+  * A10 Networks
+  * Apstra AOS
+  * Arista EOS
+  * Avi Networks
+  * BigSwitch
+  * Cisco (ASA, IOS/IOS-XR, and NX-OS)
+  * Cumulus Networks (Cumulus Linux)
+  * Dell EMC (OS6, OS9, and OS10)
+  * F5 BigIP
+  * Fortios Firewall
+  * JunOS
+  * Lenovo CNOS
+  * Netvisor
+  * Open vSwitch
+  * Palo Alto Networks PAN-OS
+  * Nokia SR OS
+  * VyOS
+
+Databases
+---------
+
+  * InfluxDB
+  * Redis
+  * Riak
+  * MS-SQL
+  * MySQL
+  * Postgresql
+  * Vertica
+
+Web Infrastructure and Clustering
+----------------------------------
+
+  * Apache HTTPD (module and mod_proxy management)
+  * Consul
+  * Django Management
+  * eJabberd
+  * htpasswd
+  * JBoss
+  * Jenkins (Jobs, Plugin, and Jenkinsfile management)
+  * Jira
+  * Kubernetes
+  * Letsencrypt
+  * Pacemaker
+  * Supervisord
+  * ZooKeeper
 
 
 
@@ -322,6 +410,29 @@ Provisioning
 
 Deployment
 ==========
+
+Software Deployment is the act of making software available on systems.
+
+Normally a series of steps that must be done in-order. (In-order task
+execution?)
+
+Example:
+
+  * Sync some data
+  * Database schema migration
+  * Remove systems from load balancer
+  * Push new code
+  * Put systems back in load balancer
+
+    * Rinse/Repeat on previously not upgraded set
+
+  * Verify services are functional
+  * Status update
+
+This is in-order task execution
+-------------------------------
+
+Remember what Ansible Playbook does?
 
 ----
 
